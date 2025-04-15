@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoSmart Water Bottle</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">EcoSmart</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Section -->
+  <main id="home" class="main-section">
+    <img src="https://via.placeholder.com/300x300" alt="EcoSmart Water Bottle">
+    <div class="product-info">
+      <h1>EcoSmart Water Bottle</h1>
+      <p>Stay hydrated. Stay sustainable.</p>
+      <button id="buyNowBtn">Buy Now</button>
+
+      <!-- Price Display -->
+      <div class="price-calculator">
+        <h2>Total Price: R<span id="totalPrice">750</span></h2>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal -->
+  <div id="buyModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Choose Your Bottle</h2>
+      <form id="productForm">
+        <label>Color:</label><br>
+        <select id="colorSelect">
+          <option value="0">Blue - R0</option>
+          <option value="2">Green - R2</option>
+          <option value="3">Black - R3</option>
+        </select><br><br>
+
+        <label><input type="checkbox" id="engraving" value="5"> Custom Engraving (+R5)</label><br>
+        <label><input type="checkbox" id="packaging" value="3"> Gift Packaging (+R3)</label><br><br>
+
+        <button type="button" onclick="calculatePrice()">Update Price</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <input type="text" placeholder="Name" required><br>
+      <input type="email" placeholder="Email" required><br>
+      <textarea placeholder="Message" required></textarea><br>
+      <label><input type="checkbox" id="terms"> I agree to the Terms and Conditions</label><br>
+      <button type="submit">Submit</button>
+    </form>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
